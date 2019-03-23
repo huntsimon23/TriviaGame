@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Simon's MCU Trivia Game</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+</head>
+<body>
+<div class="jumbotron jumbotron-fluid">
+    <div class="container">
+        <h1 class="display-4">Simon's MCU Trivia Game</h1>
+        <p class="lead">You have 15 seconds to choose the correct answer to each of these questions.  Save the world from alien threats!</p>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col col-2"><h3>Seconds Left: <span id="timer-text">30</span><h3></div>
+        <div class="col col-8"><h3>Question: <span id="question-text">Question goes here...</span></h3></div>
+        <div class="col col-2"><h3>Your Score: <span id="score-text">0</span></h3></div>
+    </div>
+    <div class="row">
+        <div class="col"><button type="button" class="btn btn-dark btn-lg btn-block" id="btn-a">Button A</button></div>
+        <div class="col"><button type="button" class="btn btn-dark btn-lg btn-block" id="btn-b">Button B</button></div>
+    </div>
+    <div class="row">
+        <div class="col"><button type="button" class="btn btn-dark btn-lg btn-block" id="btn-c">Button C</button></div>
+        <div class="col"><button type="button" class="btn btn-dark btn-lg btn-block" id="btn-b">Button D</button></div>
+    </div>
+</div>    
+</body>
+</html>
