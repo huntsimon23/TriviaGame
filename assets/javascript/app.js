@@ -1,4 +1,8 @@
+$(document).ready(function(){
+
 var ansTally = 0;
+var i = 0;
+
 var quest1 = {
     question: "What is Sharon Carter's code name?",
     a: "Agent 12",
@@ -8,21 +12,15 @@ var quest1 = {
     x: $("btn-b").data('clicked'),
     answer: "Agent 13",
 };
- 
+
 var quest2 = [];
 var questArray = [quest1, quest2];
-var i = 0
-
-$(document).ready(function(){
-// $("#start-game").click(startGame());
-$("#score-text").text(ansTally);
-console.log("ready!");
 
 function startGame() {
 console.log("Game Start");
 $(".ans").text("");
 ansTally = 0;
-i = 0
+i = 0;
 nextQuest();
 };
 
@@ -63,8 +61,10 @@ function eval() {
 function nextQuest() {
         $(".ans").text("");
         layout(questArray[i]);
-        setTimeout(eval(questArray[i]), 7000);
-        i++
+        setTimeout(function() {
+            eval(questArray[i]);
+        }, 7000);
+        i++;
         if (i === questArray.length) {
             endGame();
         }
@@ -74,4 +74,8 @@ function endGame() {
     $(".ans").text("");
     $("#question-text").text("Oh snap.  You got " + ansTally + " correct, which means you got " + (questArray.length - ansTally) + " wrong.  As the Strange Doctor says, we are in the endGame now.  Press the button below to play again.  It's like the time-loop when he defeated Dormamu...");
 }
+$("#start-game").on('click', function () {
+    startGame();
 });
+});
+
